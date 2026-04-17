@@ -41,7 +41,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ profileImage, onImageChange
       role="button"
       aria-label="Upload profile image"
     >
-      <div className="border-black border-2 p-4 rounded-[50%] overflow-hidden w-24 h-24 flex items-center justify-center">
+      <div className="border-black border-2 rounded-[50%] overflow-hidden w-20 h-20 flex items-center justify-center">
         {hasImage ? (
           <img
             src={profileImage}
@@ -49,7 +49,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ profileImage, onImageChange
             className="w-full h-full object-cover rounded-[50%]"
           />
         ) : (
-          <UserIcon width="48" height="48" color="#000" />
+          <UserIcon width="32" height="32" color="#000" />
         )}
       </div>
       <div className="border-black border p-1 rounded-4xl absolute bottom-px right-0 bg-white">

@@ -3,7 +3,7 @@ import axios from "axios"
 const host = 'https://take-home-test-api.nutech-integrasi.com'
 
 export const post = async <T>(path: string, payload: T, token?: string) => (await axios.post(
-  `${host}/${path}`,
+  `${host}${path}`,
   payload,
   {
     headers: {
@@ -12,8 +12,8 @@ export const post = async <T>(path: string, payload: T, token?: string) => (awai
   }
 )).data
 
-export const put = async <T>(path: string, payload: T, token?: string) => (await axios.post(
-  `${host}/${path}`,
+export const put = async <T>(path: string, payload: T, token?: string) => (await axios.put(
+  `${host}${path}`,
   payload,
   {
     headers: {
@@ -23,7 +23,7 @@ export const put = async <T>(path: string, payload: T, token?: string) => (await
 )).data
 
 export const get = async <T>(path: string, options?: T) => (await axios.get(
-  `${host}/${path}`,
+  `${host}${path}`,
   {
     ...options
   }
