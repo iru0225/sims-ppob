@@ -52,7 +52,7 @@ const HomePage = () => {
                 {services.map((service) => (
                     <Link key={service.service_code} to={`/payments/${service.service_code}`} className="flex flex-col items-center max-w-12.5 max-h-12.5 cursor-pointer">
                         <img src={service.service_icon} alt={service.service_name}/>
-                        <h4 className="text-xs font-bold">{service.service_name.includes('TV') ? service.service_name : service.service_name.replace(' Berlangganan', '')}</h4>
+                        <h4 className="text-xs font-bold text-center">{service.service_name.includes('TV') ? service.service_name : service.service_name.replace(' Berlangganan', '')}</h4>
                     </Link>
                 ))}
             </div>
